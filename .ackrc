@@ -1,0 +1,6 @@
+--type-add 
+php=.inc
+--type-add 
+php=.module
+--type-add 
+php=.test
