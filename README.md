@@ -12,4 +12,4 @@ Scripts included in this project include:
 Config Files
 ------------
 
-Configuration files included in this repository are those for which there is not significant per-machine differences. All of these files have names that begin with a period, and are therefore hidden from display by default on UNIX-like systems. The init script above makes this naming assumption and only operates on these files.
+Configuration files included in this repository are those for which there are no significant per-machine differences. All of these files have names that begin with a period, and are therefore hidden from display by default on UNIX-like systems. The init script above makes this naming assumption and only operates on these files.
