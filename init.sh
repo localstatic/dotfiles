@@ -23,9 +23,11 @@ fi
 
 for entry in `ls -dA $DOTFILES_DIR/.*`; do
 	basename=`basename $entry`
-	if [[ '.' != $basename && '..' != $basename ]]; then
-		cmd="ln -s $entry ${DESTINATION_DIR}/${basename}"
-		$cmd
+	if [[ '.' != $basename && '..' != $basename && '.git' != $basename ]]; then
+		if [[ ! -f "${DESTINATION_DIR}/${basename}" ]]; then
+			cmd="ln -s $entry ${DESTINATION_DIR}/${basename}"
+			$cmd
+		fi
 	fi
 done
 
