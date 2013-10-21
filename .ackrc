@@ -1,3 +1,4 @@
+--ignore-dir=log
 --type-add 
 php=.inc
 --type-add 
