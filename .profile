@@ -13,9 +13,13 @@ alias lla='ls -lA'
 alias pbpwd='pwd | tr "\n" "/" | pbcopy'
 
 alias dr='drush'
-source ~/App/drush/drush.complete.sh
+if [[ -f ~/App/drush/drush.complete.sh ]]; then
+	source ~/App/drush/drush.complete.sh
+fi
 
-source /opt/local/share/git-core/git-prompt.sh
+if [[ -f /opt/local/share/git-core/git-prompt.sh ]]; then
+	source /opt/local/share/git-core/git-prompt.sh
+fi
 
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
 export PS1='\u@\h:\W$(__git_ps1 "(%s)") \$ '
