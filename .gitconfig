@@ -1,0 +1,16 @@
+[user]
+	name = Morgan Terry
+	email = example@example.com
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %ad %Cgreen(%cr)' --abbrev-commit --date=local
+	#hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	hist = log --name-status
+[core]
+	excludesfile = /Users/mt/.gitignore_global
+	editor = mvim -f
+[push]
+	default = simple
+
