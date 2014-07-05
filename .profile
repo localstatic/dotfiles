@@ -2,9 +2,10 @@
 PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=/opt/local/lib/mysql5/bin:$PATH
 PATH=/opt/local/apache2/bin:$PATH
+PATH=~/bin:$PATH
 
 if [[ -d $HOME/.rvm/bin ]]; then
-	PATH=$HOME/.rvm/bin:~/bin:$PATH
+	PATH=$HOME/.rvm/bin:$PATH
 fi
 
 export PATH
