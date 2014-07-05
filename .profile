@@ -1,7 +1,4 @@
 
-PATH=/opt/local/bin:/opt/local/sbin:$PATH
-PATH=/opt/local/lib/mysql5/bin:$PATH
-PATH=/opt/local/apache2/bin:$PATH
 PATH=$HOME/.composer/vendor/bin:$PATH
 PATH=~/bin:$PATH
 
