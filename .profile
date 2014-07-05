@@ -20,8 +20,8 @@ if [[ -f ~/App/drush/drush.complete.sh ]]; then
 	source ~/App/drush/drush.complete.sh
 fi
 
-if [[ -f /opt/local/share/git-core/git-prompt.sh ]]; then
-	source /opt/local/share/git-core/git-prompt.sh
+if [[ -f `brew --prefix`/etc/bash_completion ]]; then
+	source `brew --prefix`/etc/bash_completion
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
