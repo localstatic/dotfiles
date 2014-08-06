@@ -1,4 +1,6 @@
 
+PATH=/usr/local/sbin:$PATH
+PATH=$(brew --prefix homebrew/php/php55)/bin:$PATH
 PATH=$HOME/.composer/vendor/bin:$PATH
 PATH=~/bin:$PATH
 
