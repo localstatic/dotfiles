@@ -20,16 +20,32 @@ fi
 export PATH
 # }
 
+# Bash Completion {
+
+# Source bash completions from known locations
+# TODO: Only do this if we know we're running as Bash?
+
+for dir in '/etc/bash_completion.d /usr/local/etc/bash_completion.d'; do
+	for file in $dir/*; do
+		if [[ -f $file ]]; then
+			source $file
+		fi
+	done
+done
+
+# }
+
 # Prompt {
 
 # TODO: Make sure we're running bash since we're using bash completion
-if [[ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]]; then
-	source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
-	export PS1='\u@\h:\W$(__git_ps1 "(%s)") \$ '
-else
-	export PS1='\u@\h:\W \$ '
+if [[ -n "$(type -t __git_ps1)" ]] && [[ "$(type -t __git_ps1)" = function ]]; then
+	prompt_extras='$(__git_ps1 "(%s)")'
+#	export PS1='\u@\h:\W$(__git_ps1 "(%s)") \$ '
+#else
+#	export PS1='\u@\h:\W \$ '
 fi
 
+export PS1="\u@\h:\W${prompt_extras} \$ "
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
 # }
 
