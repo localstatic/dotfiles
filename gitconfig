@@ -1,7 +1,7 @@
 [include]
 	path = ~/.gitconfig.local
 [core]
-	excludesfile = /Users/moterr/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
 	st = status
 	ci = commit
@@ -13,11 +13,4 @@
 	default = simple
 [branch]
 	autosetuprebase = never
-[http]
-	sslVerify = false
-[difftool "sourcetree"]
-	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-	trustExitCode = true
+
