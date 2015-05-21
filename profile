@@ -37,12 +37,8 @@ done
 
 # Prompt {
 
-# TODO: Make sure we're running bash since we're using bash completion
 if [[ -n "$(type -t __git_ps1)" ]] && [[ "$(type -t __git_ps1)" = function ]]; then
 	prompt_extras='$(__git_ps1 "(%s)")'
-#	export PS1='\u@\h:\W$(__git_ps1 "(%s)") \$ '
-#else
-#	export PS1='\u@\h:\W \$ '
 fi
 
 export PS1="\u@\h:\W${prompt_extras} \$ "
