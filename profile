@@ -22,16 +22,10 @@ export PATH
 
 # Bash Completion {
 
-# Source bash completions from known locations
 # TODO: Only do this if we know we're running as Bash?
-
-for dir in '/etc/bash_completion.d /usr/local/etc/bash_completion.d'; do
-	for file in $dir/*; do
-		if [[ -f $file ]]; then
-			source $file
-		fi
-	done
-done
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    source `brew --prefix`/etc/bash_completion
+fi
 
 # }
 
