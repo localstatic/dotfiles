@@ -61,6 +61,14 @@ set -o vi
 
 # }
 
+# Misc app-related config {
+
+if [[ -d $HOME/.profile.d ]]; then
+	source $HOME/.profile.d/*
+fi
+
+# }
+
 # Local additions/overrides {
 if [[ -r $HOME/.profile.local ]]; then
 	source $HOME/.profile.local
