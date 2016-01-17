@@ -2,6 +2,7 @@
 	path = ~/.gitconfig.local
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = mvim -f
 [alias]
 	st = status -sb
 	ci = commit
