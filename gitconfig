@@ -10,6 +10,7 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %ad %Cgreen(%cr)' --abbrev-commit --date=local
 	#hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	hist = log --name-status
+	rank = shortlog -sn
 [push]
 	default = simple
 [branch]
