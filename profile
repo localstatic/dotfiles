@@ -23,7 +23,7 @@ export PATH
 # Bash Completion {
 
 # TODO: Only do this if we know we're running as Bash?
-if [ -f `brew --prefix`/etc/bash_completion ]; then
+if [[ `type brew > /dev/null 2>&1` ]] && [[ -f `brew --prefix`/etc/bash_completion ]]; then
     source `brew --prefix`/etc/bash_completion
 fi
 
