@@ -64,6 +64,10 @@ if [[ -d "${HOME}/.nvm" ]]; then
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
 
+if [[ -f "${HOME}/.ssh/id_rsa" ]]; then
+	ssh-add ${HOME}/.ssh/id_rsa > /dev/null 2>&1
+fi
+
 # }
 
 # Misc app-related config {
