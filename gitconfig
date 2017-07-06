@@ -1,7 +1,5 @@
 [include]
 	path = ~/.gitconfig.local
-[core]
-	excludesfile = ~/.gitignore_global
 [alias]
 	st = status -sb
 	ci = commit
