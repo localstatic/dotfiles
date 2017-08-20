@@ -73,8 +73,11 @@ set -o vi
 
 if [[ -d "${HOME}/.nvm" ]]; then
 	export NVM_DIR="${HOME}/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+	if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+		source "$NVM_DIR/nvm.sh"
+	elif [[ -s "/usr/local/opt/nvm/nvm.sh" ]]; then
+		source "/usr/local/opt/nvm/nvm.sh"
+	fi
 fi
 
 if [[ -f "${HOME}/.ssh/id_rsa" ]]; then
