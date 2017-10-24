@@ -4,9 +4,9 @@
 	st = status -sb
 	ci = commit
 	co = checkout
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %ad %Cgreen(%cr)' --abbrev-commit --date=local
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%G?%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset %ad %Cgreen(%cr)' --abbrev-commit --date=local
 	#hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	hist = log --name-status
+	hist = log --name-status --show-signature
 	rank = shortlog -sn
 [push]
 	default = simple
