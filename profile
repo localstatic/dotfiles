@@ -5,7 +5,9 @@
 # Set up PATH {
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-if [[ -d $HOME/.rvm/bin ]]; then
+if [[ -d $HOME/.rbenv/shims ]]; then
+	PATH=$HOME/.rbenv/shims:$PATH
+elif [[ -d $HOME/.rvm/bin ]]; then
 	PATH=$HOME/.rvm/bin:$PATH
 fi
 
