@@ -53,6 +53,15 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
 # }
 
 # Aliases {
+
+if [[ -f "${HOME}/.aliases" ]]; then
+  source "${HOME}/.aliases"
+fi
+
+if [[ -f "${HOME}/.aliases.local" ]]; then
+  source "${HOME}/.aliases.local"
+fi
+
 alias ls='ls -GF'
 alias ll='ls -l'
 alias la='ls -A'
