@@ -8,6 +8,8 @@
 	#hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	hist = log --name-status --show-signature
 	rank = shortlog -sn
+	last-tag = describe --abbrev=0
+	changelist = !LT=$(git last-tag) && echo "" && git shortlog $LT..HEAD
 [push]
 	default = simple
 [branch]
