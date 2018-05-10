@@ -22,6 +22,20 @@ fi
 export PATH
 # }
 
+# Shell Integrations {
+
+# iTerm2 {
+
+if [[ -e "${HOME}/.iterm2_shell_integration.bash" ]]; then
+	source "${HOME}/.iterm2_shell_integration.bash"
+	enable_iterm_integration=1
+fi
+
+
+# }
+
+# }
+
 # Bash Completion {
 
 # TODO: Only do this if we know we're running as Bash?
@@ -48,7 +62,11 @@ if [[ -n "$(type -t __git_ps1)" ]] && [[ "$(type -t __git_ps1)" = function ]]; t
 	prompt_extras='$(__git_ps1 " (%s)")'
 fi
 
-export PS1="\n\[$bold\]\[$black\][\[$dk_blue\]\@\[$black\]] [\[$green\]\u\[$yellow\]@\[$green\]\h\[$black\]] [$pink\w\[$black\]]\[\033[0;33m\]${prompt_extras} \[\033[00m\]\[$reset\]\n\[$reset\]\$ "
+if [[ $enable_iterm_integration -eq 1 ]]; then
+	prompt_prefix='\[$(iterm2_prompt_mark)\] '
+fi
+
+export PS1="\n${prompt_prefix}\[$bold\]\[$black\][\[$dk_blue\]\@\[$black\]] [\[$green\]\u\[$yellow\]@\[$green\]\h\[$black\]] [$pink\w\[$black\]]\[\033[0;33m\]${prompt_extras} \[\033[00m\]\[$reset\]\n\[$reset\]\$ "
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
 # }
 
