@@ -26,7 +26,7 @@ export PATH
 
 # TODO: Only do this if we know we're running as Bash?
 if [[ `type brew > /dev/null 2>&1` -eq 0 ]] && [[ -f `brew --prefix`/etc/bash_completion ]]; then
-    source `brew --prefix`/etc/bash_completion
+	source `brew --prefix`/etc/bash_completion
 fi
 
 # }
@@ -55,11 +55,11 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
 # Aliases {
 
 if [[ -f "${HOME}/.aliases" ]]; then
-  source "${HOME}/.aliases"
+	source "${HOME}/.aliases"
 fi
 
 if [[ -f "${HOME}/.aliases.local" ]]; then
-  source "${HOME}/.aliases.local"
+	source "${HOME}/.aliases.local"
 fi
 
 alias ls='ls -GF'
