@@ -22,54 +22,6 @@ fi
 export PATH
 # }
 
-# Shell Integrations {
-
-# iTerm2 {
-
-if [[ -e "${HOME}/.iterm2_shell_integration.bash" ]]; then
-	source "${HOME}/.iterm2_shell_integration.bash"
-	enable_iterm_integration=1
-fi
-
-
-# }
-
-# }
-
-# Bash Completion {
-
-# TODO: Only do this if we know we're running as Bash?
-if [[ `type brew > /dev/null 2>&1` -eq 0 ]] && [[ -f `brew --prefix`/etc/bash_completion ]]; then
-	source `brew --prefix`/etc/bash_completion
-fi
-
-# }
-
-# Prompt {
-
-black=$(tput -Txterm setaf 0)
-red=$(tput -Txterm setaf 1)
-green=$(tput -Txterm setaf 2)
-yellow=$(tput -Txterm setaf 3)
-dk_blue=$(tput -Txterm setaf 4)
-pink=$(tput -Txterm setaf 5)
-lt_blue=$(tput -Txterm setaf 6)
-
-bold=$(tput -Txterm bold)
-reset=$(tput -Txterm sgr0)
-
-if [[ -n "$(type -t __git_ps1)" ]] && [[ "$(type -t __git_ps1)" = function ]]; then
-	prompt_extras='$(__git_ps1 " (%s)")'
-fi
-
-if [[ $enable_iterm_integration -eq 1 ]]; then
-	prompt_prefix='\[$(iterm2_prompt_mark)\] '
-fi
-
-export PS1="\n${prompt_prefix}\[$bold\]\[$black\][\[$dk_blue\]\@\[$black\]] [\[$green\]\u\[$yellow\]@\[$green\]\h\[$black\]] [$pink\w\[$black\]]\[\033[0;33m\]${prompt_extras} \[\033[00m\]\[$reset\]\n\[$reset\]\$ "
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
-# }
-
 # Aliases {
 
 if [[ -f "${HOME}/.aliases" ]]; then
@@ -101,12 +53,13 @@ set -o vi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 if [[ -d "${HOME}/.nvm" ]]; then
-	export NVM_DIR="${HOME}/.nvm"
-	if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-		source "$NVM_DIR/nvm.sh"
-	elif [[ -s "/usr/local/opt/nvm/nvm.sh" ]]; then
-		source "/usr/local/opt/nvm/nvm.sh"
-	fi
+  export NVM_DIR="${HOME}/.nvm"
+  if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+    source "$NVM_DIR/nvm.sh"
+  fi
+elif [[ -s "/usr/local/opt/nvm/nvm.sh" ]]; then
+  export NVM_DIR="/usr/local/opt/nvm"
+  source "/usr/local/opt/nvm/nvm.sh"
 fi
 
 if [[ -f "${HOME}/.ssh/id_rsa" ]]; then
