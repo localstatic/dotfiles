@@ -51,13 +51,13 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 if [[ -d "${HOME}/.nvm" ]]; then
-  export NVM_DIR="${HOME}/.nvm"
-  if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-    source "$NVM_DIR/nvm.sh"
-  fi
+	export NVM_DIR="${HOME}/.nvm"
+	if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+		source "$NVM_DIR/nvm.sh"
+	fi
 elif [[ -s "/usr/local/opt/nvm/nvm.sh" ]]; then
-  export NVM_DIR="/usr/local/opt/nvm"
-  source "/usr/local/opt/nvm/nvm.sh"
+	export NVM_DIR="/usr/local/opt/nvm"
+	source "/usr/local/opt/nvm/nvm.sh"
 fi
 
 if [[ -f "${HOME}/.ssh/id_rsa" ]]; then
