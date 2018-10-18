@@ -32,6 +32,11 @@ if [[ -f "${HOME}/.aliases.local" ]]; then
 	source "${HOME}/.aliases.local"
 fi
 
+which mvim >/dev/null 2>&1
+if [[ $? == 0 ]]; then
+	alias vim="mvim -v"
+fi
+
 alias ls='ls -GF'
 alias ll='ls -l'
 alias la='ls -A'
