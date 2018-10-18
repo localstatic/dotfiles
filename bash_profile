@@ -54,6 +54,11 @@ export PS1="\n${prompt_prefix}\[$bold\]\[$black\][\[$dk_blue\]\@\[$black\]] [\[$
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
 # }
 
+# Misc {
+
+set -o vi
+
+# }
 
 # Local additions/overrides {
 if [[ -r $HOME/.bash_profile.local ]]; then

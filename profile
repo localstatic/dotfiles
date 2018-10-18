@@ -48,8 +48,6 @@ if [[ -d "${HOME}/man" ]]; then
 	export MANPATH="$(manpath):${HOME}/man"
 fi
 
-set -o vi
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 if [[ -d "${HOME}/.nvm" ]]; then
