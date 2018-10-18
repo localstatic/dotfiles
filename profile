@@ -37,7 +37,6 @@ alias ll='ls -l'
 alias la='ls -A'
 alias lla='ls -lA'
 alias pbpwd='pwd | tr "\n" "/" | pbcopy'
-alias yr='yarn run'
 alias k='kubectl'
 # }
 
