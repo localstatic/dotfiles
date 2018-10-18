@@ -1,4 +1,7 @@
 
+if [[ -e ~/.profile ]]; then
+  source ~/.profile
+fi
 
 if [[ -e /usr/local/share/antigen/antigen.zsh ]]; then
   source /usr/local/share/antigen/antigen.zsh
