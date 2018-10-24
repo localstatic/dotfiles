@@ -35,7 +35,8 @@ elif [[ -f ${HOME}/.oh-my-zsh ]]; then
   )
 
   source $ZSH/oh-my-zsh.sh
-
-  # User configuration
-  unsetopt share_history
 fi
+
+# Additional user configuration
+unsetopt SHARE_HISTORY
+unsetopt INC_APPEND_HISTORY
