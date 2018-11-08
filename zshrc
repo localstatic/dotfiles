@@ -25,16 +25,6 @@ if [[ $? == 0 ]]; then
 
   # Tell Antigen that we're done
   antigen apply
-elif [[ -f ${HOME}/.oh-my-zsh ]]; then
-  export ZSH="${HOME}/.oh-my-zsh"
-
-  ZSH_THEME="robbyrussell"
-
-  plugins=(
-    git
-  )
-
-  source $ZSH/oh-my-zsh.sh
 fi
 
 # Additional user configuration
