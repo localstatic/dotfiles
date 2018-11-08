@@ -40,3 +40,5 @@ fi
 # Additional user configuration
 unsetopt SHARE_HISTORY
 unsetopt INC_APPEND_HISTORY
+
+export SPACESHIP_EXIT_CODE_SHOW=true
