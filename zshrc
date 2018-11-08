@@ -7,7 +7,7 @@ if [[ -e /usr/local/share/antigen/antigen.zsh ]]; then
   source /usr/local/share/antigen/antigen.zsh
 fi
 
-which -s antigen >/dev/null 2>&1
+which antigen >/dev/null 2>&1
 if [[ $? == 0 ]]; then
   # Load the oh-my-zsh library.
   antigen use oh-my-zsh
