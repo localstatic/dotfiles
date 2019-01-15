@@ -5,16 +5,6 @@
 # Set up PATH {
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-if [[ -d $HOME/.rbenv/shims ]]; then
-	PATH=$HOME/.rbenv/shims:$PATH
-elif [[ -d $HOME/.rvm/bin ]]; then
-	PATH=$HOME/.rvm/bin:$PATH
-fi
-
-if [[ -d $HOME/.composer/vendor/bin ]]; then
-	PATH=$HOME/.composer/vendor/bin:$PATH
-fi
-
 if [[ -d $HOME/bin ]]; then
 	PATH=$HOME/bin:$PATH
 fi
@@ -52,8 +42,6 @@ export VISUAL=$EDITOR
 if [[ -d "${HOME}/man" ]]; then
 	export MANPATH="$(manpath):${HOME}/man"
 fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 if [[ -d "${HOME}/.nvm" ]]; then
 	export NVM_DIR="${HOME}/.nvm"
