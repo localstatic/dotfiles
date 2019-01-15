@@ -28,9 +28,10 @@ if [[ $? == 0 ]]; then
 fi
 
 alias ls='ls -GF'
-alias ll='ls -l'
 alias la='ls -A'
-alias lla='ls -lA'
+alias ll='ls -l'
+alias lla='ll -A'
+alias lld='ll -d'
 alias pbpwd='pwd | tr "\n" "/" | pbcopy'
 alias k='kubectl'
 # }
