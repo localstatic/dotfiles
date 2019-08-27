@@ -35,6 +35,7 @@ alias lld='ll -d'
 alias pbpwd='pwd | tr "\n" "/" | pbcopy'
 alias k='kubectl'
 alias tf='terraform'
+alias weather='curl http://wttr.in'
 # }
 
 # Misc environment stuff {
