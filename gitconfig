@@ -16,7 +16,6 @@
 	default = simple
 [branch]
 	autosetuprebase = never
-
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 # moved to .gitconfig.local on Mac machines
