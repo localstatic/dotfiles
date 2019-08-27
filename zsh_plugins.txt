@@ -1,0 +1,9 @@
+# Pull some plugins selectively from oh-my-zsh
+robbyrussell/oh-my-zsh path:plugins/vi-mode
+robbyrussell/oh-my-zsh path:plugins/command-not-found
+
+# Syntax highlighting bundle.
+zsh-users/zsh-syntax-highlighting
+
+# Load the theme
+denysdovhan/spaceship-prompt spaceship
