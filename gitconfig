@@ -1,4 +1,6 @@
 [include]
+	# System-specific configs go in a separate file
+	# This is useful for things like work vs personal email addresses and system-specific tooling
 	path = ~/.gitconfig.local
 [alias]
 	st = status -sb
@@ -15,7 +17,8 @@
 [branch]
 	autosetuprebase = never
 
-[gpg]
-	program = /usr/local/MacGPG2/bin/gpg2
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+# moved to .gitconfig.local on Mac machines
+# [gpg]
+# 	program = /usr/local/MacGPG2/bin/gpg2
