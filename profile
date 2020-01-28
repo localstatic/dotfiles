@@ -2,8 +2,16 @@
 # vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
 # }
 
+if [[ -d ${HOME}/go ]]; then
+  GOPATH=${HOME}/go
+fi
+
 # Set up PATH {
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+if [[ ! -z $GOPATH ]]; then
+  PATH=${GOPATH}/bin:${PATH}
+fi
 
 if [[ -d $HOME/bin ]]; then
 	PATH=$HOME/bin:$PATH
