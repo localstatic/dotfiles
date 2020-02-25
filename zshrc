@@ -1,9 +1,17 @@
+#
+# .zshrc
+#
+
 
 if [[ -e ~/.profile ]]; then
   source ~/.profile
 fi
 
-# https://getantibody.github.io/
+# 
+# Handle plugins
+# 
+
+# antibody - https://getantibody.github.io/
 which antibody >/dev/null 2>&1
 if [[ $? == 0 ]]; then
   source <(antibody init)
@@ -11,7 +19,10 @@ if [[ $? == 0 ]]; then
   antibody bundle < ~/.zsh_plugins.txt
 fi
 
+# 
 # Additional user configuration
+# 
+
 unsetopt SHARE_HISTORY
 unsetopt INC_APPEND_HISTORY
 
