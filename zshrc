@@ -35,3 +35,10 @@ export \
 source <(kubectl completion zsh)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# 
+# Tooling integrations
+# 
+
+# fzf - https://github.com/junegunn/fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
