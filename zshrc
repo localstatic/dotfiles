@@ -2,6 +2,8 @@
 # .zshrc
 #
 
+autoload -Uz compinit
+compinit
 
 if [[ -e ~/.profile ]]; then
   source ~/.profile
@@ -29,3 +31,7 @@ unsetopt INC_APPEND_HISTORY
 export \
   SPACESHIP_EXIT_CODE_SHOW=true \
   SPACESHIP_TIME_SHOW=true
+
+source <(kubectl completion zsh)
+
+fpath=(/usr/local/share/zsh-completions $fpath)
