@@ -15,4 +15,6 @@ fi
 unsetopt SHARE_HISTORY
 unsetopt INC_APPEND_HISTORY
 
-export SPACESHIP_EXIT_CODE_SHOW=true
+export \
+  SPACESHIP_EXIT_CODE_SHOW=true \
+  SPACESHIP_TIME_SHOW=true
