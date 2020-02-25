@@ -40,5 +40,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Tooling integrations
 # 
 
+# direnv - https://direnv.net/
+eval "$(direnv hook zsh)"
+
 # fzf - https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
