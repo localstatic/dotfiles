@@ -41,7 +41,10 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # 
 
 # direnv - https://direnv.net/
-eval "$(direnv hook zsh)"
+which direnv > /dev/null 2>&1
+if [[ $? == 0 ]]; then
+  eval "$(direnv hook zsh)"
+fi
 
 # fzf - https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
