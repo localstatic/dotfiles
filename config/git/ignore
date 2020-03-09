@@ -3,3 +3,6 @@
 
 # ctags tags file
 tags
+
+# vim session files
+Session.vim
