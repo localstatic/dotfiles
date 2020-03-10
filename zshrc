@@ -9,6 +9,10 @@ if [[ -e ~/.profile ]]; then
   source ~/.profile
 fi
 
+if [[ -e ~/.zshrc.local ]]; then
+  source ~/.zshrc.local
+fi
+
 # 
 # Handle plugins
 # 
