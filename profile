@@ -54,15 +54,21 @@ if [[ -d "${HOME}/man" ]]; then
 	export MANPATH="$(manpath):${HOME}/man"
 fi
 
+# NVM {
 if [[ -d "${HOME}/.nvm" ]]; then
 	export NVM_DIR="${HOME}/.nvm"
-	if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-		source "$NVM_DIR/nvm.sh"
-	fi
 elif [[ -s "/usr/local/opt/nvm/nvm.sh" ]]; then
 	export NVM_DIR="/usr/local/opt/nvm"
-	source "/usr/local/opt/nvm/nvm.sh"
 fi
+
+if [[ ! -z $NVM_DIR ]]; then
+	if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+		source "$NVM_DIR/nvm.sh"
+  else
+	  source "/usr/local/opt/nvm/nvm.sh"
+	fi
+fi
+# }
 
 if [[ -f "${HOME}/.ssh/id_rsa" ]]; then
 	ssh-add ${HOME}/.ssh/id_rsa > /dev/null 2>&1
