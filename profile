@@ -30,20 +30,6 @@ if [[ -f "${HOME}/.aliases.local" ]]; then
 	source "${HOME}/.aliases.local"
 fi
 
-which mvim >/dev/null 2>&1
-if [[ $? == 0 ]]; then
-	alias vim="mvim -v"
-fi
-
-alias ls='ls -GF'
-alias la='ls -A'
-alias ll='ls -l'
-alias lla='ll -A'
-alias lld='ll -d'
-alias pbpwd='pwd | tr "\n" "/" | pbcopy'
-alias k='kubectl'
-alias tf='terraform'
-alias weather='curl http://wttr.in'
 # }
 
 # Misc environment stuff {

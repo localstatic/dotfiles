@@ -1,1 +1,23 @@
+# .aliases
+
+alias ls='ls -GF'
+alias la='ls -A'
+alias ll='ls -l'
+alias lla='ll -A'
+alias lld='ll -d'
+
+alias pbpwd='pwd | tr "\n" "/" | pbcopy'
+
+#
+# Misc applications & shortcuts
+#
+
+which mvim >/dev/null 2>&1
+if [[ $? == 0 ]]; then
+	alias vim="mvim -v"
+fi
+
+alias k='kubectl'
+alias tf='terraform'
+alias weather='curl http://wttr.in'
 alias openapi-validate='docker run -it --rm -v $(pwd):/project -w /project usabillabv/openapi3-validator'
