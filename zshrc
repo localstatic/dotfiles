@@ -13,9 +13,9 @@ if [[ -e ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
 
-# 
+#
 # Handle plugins
-# 
+#
 
 # antibody - https://getantibody.github.io/
 which antibody >/dev/null 2>&1
@@ -25,9 +25,9 @@ if [[ $? == 0 ]]; then
   antibody bundle < ~/.zsh_plugins.txt
 fi
 
-# 
+#
 # Additional user configuration
-# 
+#
 
 unsetopt SHARE_HISTORY
 unsetopt INC_APPEND_HISTORY
@@ -57,9 +57,9 @@ source <(kubectl completion zsh)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# 
+#
 # Tooling integrations
-# 
+#
 
 # direnv - https://direnv.net/
 which direnv > /dev/null 2>&1
