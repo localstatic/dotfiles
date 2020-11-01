@@ -53,7 +53,11 @@ export \
     char          # Prompt character
   )
 
-source <(kubectl completion zsh)
+
+which kubectl >/dev/null 2>&1
+if [[ $? == 0 ]]; then
+  source <(kubectl completion zsh)
+fi
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
