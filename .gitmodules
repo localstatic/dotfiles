@@ -1,3 +1,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm
+[submodule "zinit/bin"]
+	path = zinit/bin
+	url = https://github.com/zdharma/zinit.git

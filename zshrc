@@ -17,12 +17,19 @@ fi
 # Handle plugins
 #
 
-# antibody - https://getantibody.github.io/
-which antibody >/dev/null 2>&1
-if [[ $? == 0 ]]; then
-  source <(antibody init)
+# zinit - https://github.com/zdharma/zinit
+if [[ -e $HOME/.zinit/bin/zinit.zsh ]]; then
+  source "$HOME/.zinit/bin/zinit.zsh"
+  autoload -Uz _zinit
+  (( ${+_comps} )) && _comps[zinit]=_zinit
 
-  antibody bundle < ~/.zsh_plugins.txt
+  # add our preferred plugins
+  zinit snippet OMZ::plugins/vi-mode/vi-mode.plugin.zsh
+  zinit light zsh-users/zsh-syntax-highlighting
+  zinit light denysdovhan/spaceship-prompt
+else
+  echo "zinit not installed."
+  export PS1="$"
 fi
 
 #
