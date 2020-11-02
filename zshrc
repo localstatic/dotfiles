@@ -43,7 +43,7 @@ export \
     git           # Git section (git_branch + git_status)
     package       # Package version
     aws           # Amazon Web Services section
-    kubecontext   # Kubectl context section
+    # kubecontext   # Kubectl context section
     terraform     # Terraform workspace section
     exec_time     # Execution time
     line_sep      # Line break
