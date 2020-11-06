@@ -1,7 +1,7 @@
 Dotfiles
 ========
 
-This project contains my personal dotfiles. I use [thoughtbot/rcm](https://github.com/thoughtbot/rcm) to manage these configs.
+This project contains my personal dotfiles.
 
 One notable absense from this repository is my Vim config. That can be found in its own repo at localstatic/vimrc.
 
@@ -9,7 +9,6 @@ Installation
 ------------
 
 1. Clone this repo to the desired location (e.g. ~/.dotfiles)
-  1. If not cloned to ~/.dotfiles, symlink the repo to ~/.dotfiles
-2. `git submodule update --init`
-3. `rcup -x README.md -x '*.template'` # Exclusions are only required the first time (before .rcrc is symlinked)
-
+2. `cd ~/.dotfiles`
+  * adjust location to match where you cloned to in step 1
+3. `./install`

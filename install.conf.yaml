@@ -1,0 +1,36 @@
+# dotbot config file
+
+- defaults:
+    link:
+       relink: true
+
+- clean: ['~', '~/.config', '~/.profile.d']
+
+- create:
+    - ~/.config
+    - ~/.profile.d
+
+- link:
+    ~/.ackrc: ackrc
+    ~/.aliases: aliases
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: profile
+    ~/.config:
+        glob: true
+        path: config/*
+    ~/.ctags: ctags
+    ~/.gitconfig: gitconfig
+    ~/.inputrc: inputrc
+    ~/.profile: profile
+    ~/.profile.d:
+        glob: true
+        path: profile.d/*
+    ~/.tmux: tmux
+    ~/.tmux.conf: tmux.conf
+    ~/.wgetrc: wgetrc
+    ~/.zinit: zinit
+    ~/.zshrc: zshrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
