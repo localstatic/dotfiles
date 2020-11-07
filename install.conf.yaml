@@ -27,10 +27,12 @@
         path: profile.d/*
     ~/.tmux: tmux
     ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
     ~/.wgetrc: wgetrc
     ~/.zinit: zinit
     ~/.zshrc: zshrc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [vim/bin/setup.sh, Setting up vim config]
 
