@@ -23,7 +23,8 @@ fi
 
 # Bash Completion {
 
-if [[ `type brew > /dev/null 2>&1` -eq 0 ]] && [[ -f `brew --prefix`/etc/bash_completion ]]; then
+type brew > /dev/null 2>&1
+if [[ $? -eq 0 && -f `brew --prefix`/etc/bash_completion ]]; then
 	source `brew --prefix`/etc/bash_completion
 fi
 
