@@ -12,7 +12,7 @@ alias pbpwd='pwd | tr "\n" "/" | pbcopy'
 # Misc applications & shortcuts
 #
 
-which mvim >/dev/null 2>&1
+command -V mvim >/dev/null 2>&1
 if [[ $? == 0 ]]; then
 	alias vim="mvim -v"
 fi
@@ -21,3 +21,9 @@ alias k='kubectl'
 alias tf='terraform'
 alias weather='curl http://wttr.in'
 alias openapi-validate='docker run -it --rm -v $(pwd):/project -w /project usabillabv/openapi3-validator'
+
+command -V xclip >/dev/null 2>&1
+if [[ $? == 0 ]]; then
+	alias clipboard='xclip -selection c'
+fi
+
