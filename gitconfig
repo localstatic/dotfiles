@@ -21,3 +21,5 @@
 # moved to .gitconfig.local on Mac machines
 # [gpg]
 # 	program = /usr/local/MacGPG2/bin/gpg2
+[pull]
+	ff = only
