@@ -23,3 +23,5 @@
 # 	program = /usr/local/MacGPG2/bin/gpg2
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
