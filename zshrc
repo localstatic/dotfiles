@@ -26,7 +26,8 @@ if [[ -e $HOME/.zinit/bin/zinit.zsh ]]; then
   # add our preferred plugins
   zinit snippet OMZ::plugins/vi-mode/vi-mode.plugin.zsh
   zinit light zsh-users/zsh-syntax-highlighting
-  zinit light denysdovhan/spaceship-prompt
+  zinit light spaceship-prompt/spaceship-prompt
+  zinit light spaceship-prompt/spaceship-vi-mode
 else
   echo "zinit not installed."
   export PS1="$"
